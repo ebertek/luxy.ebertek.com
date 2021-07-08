@@ -17,6 +17,7 @@
 
     <link href="humans.txt"   rel="author"     type="text/plain" />
     <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <script src="js/luxy.js" type="text/javascript" charset="utf-8"></script>
   </head>
 
   <body>
@@ -25,9 +26,196 @@
       <header>LUXy</header>
 
       <main>
-        Candela<br />
-        Lumen<br />
-        Lux<br />
+        <table>
+          <tr>
+            <th>Measure</th>
+            <th>Symbol</th>
+            <th>Unit</th>
+            <th>Equation</th>
+          </tr>
+          <tr>
+            <td>Luminous intensity</td>
+            <td>I<sub>v</sub></td>
+            <td>candela = cd</td>
+            <td>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <msub>
+      <mi>I</mi>
+      <mstyle mathvariant="normal">
+        <mi>v</mi>
+      </mstyle>
+    </msub>
+    <mo>=</mo>
+    <mn>683</mn>
+    <msubsup>
+      <mo>∫</mo>
+      <mn>0</mn>
+      <mi>∞</mi>
+    </msubsup>
+    <mover>
+      <mi>y</mi>
+      <mo accent="true">¯</mo>
+    </mover>
+    <mo stretchy="false" form="prefix">(</mo>
+    <mi>λ</mi>
+    <mo stretchy="false" form="postfix">)</mo>
+    <mo>⋅</mo>
+    <mfrac>
+      <mrow>
+        <mi>d</mi>
+        <msub>
+          <mi>I</mi>
+          <mstyle mathvariant="normal">
+            <mi>e</mi>
+          </mstyle>
+        </msub>
+        <mo stretchy="false" form="prefix">(</mo>
+        <mi>λ</mi>
+        <mo stretchy="false" form="postfix">)</mo>
+      </mrow>
+      <mrow>
+        <mi>d</mi>
+        <mi>λ</mi>
+      </mrow>
+    </mfrac>
+    <mspace width="0.167em" />
+    <mi>d</mi>
+    <mi>λ</mi>
+  </mrow>
+</math>
+            </td>
+          </tr>
+          <tr>
+            <td>Luminous flux</td>
+            <td>Φ<sub>v</sub></td>
+            <td>lumen = lm = cd⋅sr</td>
+            <td>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <msub>
+      <mi>Φ</mi>
+      <mstyle mathvariant="normal">
+        <mi>v</mi>
+      </mstyle>
+    </msub>
+    <mo>=</mo>
+    <msub>
+      <mi>I</mi>
+      <mstyle mathvariant="normal">
+        <mi>v</mi>
+      </mstyle>
+    </msub>
+    <mi>Ω</mi>
+  </mrow>
+</math>
+            </td>
+          </tr>
+          <tr>
+            <td>Illuminance</td>
+            <td>E<sub>v</sub></td>
+            <td>lux = lx = lm/m² = cd⋅sr/m²</td>
+            <td>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <msub>
+      <mi>E</mi>
+      <mstyle mathvariant="normal">
+        <mi>v</mi>
+      </mstyle>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
+      <msub>
+        <mi>Φ</mi>
+        <mstyle mathvariant="normal">
+          <mi>v</mi>
+        </mstyle>
+      </msub>
+      <mi>A</mi>
+    </mfrac>
+  </mrow>
+</math>
+            </td>
+          </tr>
+          <tr>
+            <td>Luminance</td>
+            <td>L<sub>v</sub></td>
+            <td>nit = nt = lm/(sr⋅m²) = cd/m²</td>
+            <td>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <msub>
+      <mi>L</mi>
+      <mstyle mathvariant="normal">
+        <mi>v</mi>
+      </mstyle>
+    </msub>
+    <mo>=</mo>
+    <mfrac>
+      <mrow>
+        <msup>
+          <mstyle mathvariant="normal">
+            <mi>d</mi>
+          </mstyle>
+          <mn>2</mn>
+        </msup>
+        <msub>
+          <mi>Φ</mi>
+          <mstyle mathvariant="normal">
+            <mi>v</mi>
+          </mstyle>
+        </msub>
+      </mrow>
+      <mrow>
+        <mstyle mathvariant="normal">
+          <mi>d</mi>
+        </mstyle>
+        <mi>Σ</mi>
+        <mspace width="0.167em" />
+        <mstyle mathvariant="normal">
+          <mi>d</mi>
+        </mstyle>
+        <msub>
+          <mi>Ω</mi>
+          <mi>Σ</mi>
+        </msub>
+        <mo>cos</mo>
+        <msub>
+          <mi>θ</mi>
+          <mi>Σ</mi>
+        </msub>
+      </mrow>
+    </mfrac>
+  </mrow>
+</math>
+            </td>
+          </tr>
+        </table>
+        <h3>Lux to lumen (area)</h3>
+        <form method="post" name="lxlm">
+          <input type="number" id="lxlm_lx" name="lxlm_lx" min="0" /> lx * <input type="number" id="lxlm_m2" name="lxlm_m2" min="0" /> m² = <input type="number" id="lxlm_lm" name="lxlm_lm" readonly="readonly" /> lm
+        </form>
+        <h3>Lumen to lux (area)</h3>
+        <form method="post" name="lmlx">
+          <input type="number" id="lmlx_lm" name="lmlx_lm" min="0" /> lm / <input type="number" id="lmlx_m2" name="lmlx_m2" min="0" /> m² = <input type="number" id="lmlx_lx" name="lmlx_lx" readonly="readonly" /> lx
+        </form>
+        <h3>Lux to candela (distance)</h3>
+        <form method="post" name="lxcd">
+          <input type="number" id="lxcd_lx" name="lxcd_lx" min="0" /> lx * <input type="number" id="lxcd_m" name="lxcd_m" min="0" /> m * <input type="number" id="lxcd_m_" name="lxcd_m_" readonly="readonly" /> m = <input type="number" id="lxcd_cd" name="lxcd_cd" readonly="readonly" /> cd
+        </form>
+        <h3>Candela to lux (distance)</h3>
+        <form method="post" name="cdlx">
+          <input type="number" id="cdlx_cd" name="cdlx_cd" min="0" /> cd / (<input type="number" id="cdlx_m" name="cdlx_m" min="0" /> m * <input type="number" id="cdlx_m_" name="cdlx_m_" readonly="readonly" /> m) = <input type="number" id="cdlx_lx" name="cdlx_lx" readonly="readonly" /> lx
+        </form>
+        <h3>Lumen to candela (beam angle)</h3>
+        <form method="post" name="lmcd">
+          <input type="number" id="lmcd_lm" name="lmcd_lm" min="0" /> lm / (2π * (1 - cos((<input type="number" id="lmcd_deg" name="lmcd_deg" max="180" />° π/180)/2))) = <input type="number" id="lmcd_cd" name="lmcd_cd" readonly="readonly" /> cd
+        </form>
+        <h3>Candela to lumen (beam angle)</h3>
+        <form method="post" name="cdlm">
+          2π * <input type="number" id="cdlm_cd" name="cdlm_cd" min="0" /> cd * (1 - cos((<input type="number" id="cdlm_deg" name="cdlm_deg" max="180" />° π/180)/2)) = <input type="number" id="cdlm_lm" name="cdlm_lm" readonly="readonly" /> lm
+        </form>
       </main>
 
     </div>
