@@ -110,4 +110,36 @@ window.addEventListener("load", function() {
     cdlm_lm.value=cdlm(cdlm_cd.value, e.target.value);
   });
 
+  const lxcdlm_lx = document.getElementById('lxcdlm_lx');
+  const lxcdlm_m = document.getElementById('lxcdlm_m');
+  const lxcdlm_m_ = document.getElementById('lxcdlm_m_');
+  const lxcdlm_deg = document.getElementById('lxcdlm_deg');
+  const lxcdlm_lm = document.getElementById('lxcdlm_lm');
+  lxcdlm_lx.addEventListener("change", (e) => {
+    lxcdlm_lm.value=lmcdlx(e.target.value, lxcdlm_m.value, lxcdlm_deg.value);
+  });
+  lxcdlm_m.addEventListener("change", (e) => {
+    lxcdlm_m_.value=e.target.value;
+    lxcdlm_lm.value=lmcdlx(lxcdlm_lx.value, e.target.value, lxcdlm_deg.value);
+  });
+  lxcdlm_deg.addEventListener("change", (e) => {
+    lxcdlm_lm.value=lmcdlx(lxcdlm_lx.value, lxcdlm_m.value, e.target.value);
+  });
+
+  const lmcdlx_lm = document.getElementById('lmcdlx_lm');
+  const lmcdlx_m = document.getElementById('lmcdlx_m');
+  const lmcdlx_m_ = document.getElementById('lmcdlx_m_');
+  const lmcdlx_deg = document.getElementById('lmcdlx_deg');
+  const lmcdlx_lx = document.getElementById('lmcdlx_lx');
+  lmcdlx_lm.addEventListener("change", (e) => {
+    lmcdlx_lx.value=lmcdlx(e.target.value, lmcdlx_m.value, lmcdlx_deg.value);
+  });
+  lmcdlx_m.addEventListener("change", (e) => {
+    lmcdlx_m_.value=e.target.value;
+    lmcdlx_lx.value=lmcdlx(lmcdlx_lm.value, e.target.value, lmcdlx_deg.value);
+  });
+  lmcdlx_deg.addEventListener("change", (e) => {
+    lmcdlx_lx.value=lmcdlx(lmcdlx_lm.value, lmcdlx_m.value, e.target.value);
+  });
+
 });
