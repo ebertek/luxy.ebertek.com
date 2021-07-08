@@ -1,0 +1,13 @@
+/* TEAM */
+  David Ebert
+  Contact: ebertek@gmail.com
+  Twitter: @ebertek
+  Location: Budapest, Hungary
+
+/* THANKS */
+  Melinda Ban
+
+/* SITE */
+  Last update: 2021/07/08
+  Language: English
+  Software: Atom
