@@ -1,4 +1,5 @@
 html, body {
+  padding-bottom: 3em;
   background: #808080;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Roboto', 'Helvetica Neue', system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   -moz-osx-font-smoothing: auto;
