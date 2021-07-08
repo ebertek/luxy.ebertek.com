@@ -190,19 +190,19 @@
             </td>
           </tr>
         </table>
-        <h3>Lux to lumen (area)</h3>
+        <h3>Lux to lumen (surface area)</h3>
         <form method="post" name="lxlm">
           <input type="number" id="lxlm_lx" name="lxlm_lx" min="0" /> lx * <input type="number" id="lxlm_m2" name="lxlm_m2" min="0" /> m² = <input type="number" id="lxlm_lm" name="lxlm_lm" readonly="readonly" /> lm
         </form>
-        <h3>Lumen to lux (area)</h3>
+        <h3>Lumen to lux (surface area)</h3>
         <form method="post" name="lmlx">
           <input type="number" id="lmlx_lm" name="lmlx_lm" min="0" /> lm / <input type="number" id="lmlx_m2" name="lmlx_m2" min="0" /> m² = <input type="number" id="lmlx_lx" name="lmlx_lx" readonly="readonly" /> lx
         </form>
-        <h3>Lux to candela (distance)</h3>
+        <h3>Lux to candela (measuring distance)</h3>
         <form method="post" name="lxcd">
           <input type="number" id="lxcd_lx" name="lxcd_lx" min="0" /> lx * <input type="number" id="lxcd_m" name="lxcd_m" min="0" /> m * <input type="number" id="lxcd_m_" name="lxcd_m_" readonly="readonly" /> m = <input type="number" id="lxcd_cd" name="lxcd_cd" readonly="readonly" /> cd
         </form>
-        <h3>Candela to lux (distance)</h3>
+        <h3>Candela to lux (measuring distance)</h3>
         <form method="post" name="cdlx">
           <input type="number" id="cdlx_cd" name="cdlx_cd" min="0" /> cd / (<input type="number" id="cdlx_m" name="cdlx_m" min="0" /> m * <input type="number" id="cdlx_m_" name="cdlx_m_" readonly="readonly" /> m) = <input type="number" id="cdlx_lx" name="cdlx_lx" readonly="readonly" /> lx
         </form>
@@ -215,9 +215,9 @@
           2π * <input type="number" id="cdlm_cd" name="cdlm_cd" min="0" /> cd * (1 - cos((<input type="number" id="cdlm_deg" name="cdlm_deg" max="180" />° π/180)/2)) = <input type="number" id="cdlm_lm" name="cdlm_lm" readonly="readonly" /> lm
         </form>
         <hr />
-        <h3>Lux to lumen (distance, beam angle)</h3>
+        <h3>Lux to lumen (measuring distance, beam angle)</h3>
         <input type="number" id="lxcdlm_lx" name="lxcdlm_lx" min="0" /> lx * 2π * <input type="number" id="lxcdlm_m" name="lxcdlm_m" min="0" /> m * <input type="number" id="lxcdlm_m_" name="lxcdlm_m_" readonly="readonly" /> m * (1 - cos((<input type="number" id="lxcdlm_deg" name="lxcdlm_deg" max="180" />° π/180)/2)) = <input type="number" id="lxcdlm_lm" name="lxcdlm_lm" readonly="readonly" /> lm
-        <h3>Lumen to lux (distance, beam angle)</h3>
+        <h3>Lumen to lux (measuring distance, beam angle)</h3>
         <input type="number" id="lmcdlx_lm" name="lmcdlx_lm" min="0" /> lm / (2π * <input type="number" id="lmcdlx_m" name="lmcdlx_m" min="0" /> m * <input type="number" id="lmcdlx_m_" name="lmcdlx_m_" readonly="readonly" /> m * (1 - cos((<input type="number" id="lmcdlx_deg" name="lmcdlx_deg" max="180" />° π/180)/2))) = <input type="number" id="lmcdlx_lx" name="lmcdlx_lx" readonly="readonly" /> lx
       </main>
 
